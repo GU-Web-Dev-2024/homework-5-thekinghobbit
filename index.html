@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Interactive Art Gallery</title>
 </head>
@@ -11,7 +14,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>Interactive Art Gallery</h1>
+            <h1>y̵̛͍͔̘̳̹̺͕͙͓̠͇̣̪̙̒̌̐͂o̶̼̖͊̒̀͗͝͝ứ̶̢̘̘̫̭͓̲̙̮̥͉̻͍̩̌̋̓̿͌̓͊͋̇̕ ̸̛̗͙͖̬̪̪͎̖̱͖̟̼̯̪͕̂́̔̿͜s̵̡͔͚̮̒̆̀̀̏̅̑̿̔̅͝ḣ̷̛̭̳͐̅̍̓̄̽͂̾̉̌̄̅͛̍̕ô̸̡̧̰̼͚͚͚̱̣̮̭ư̵̦̹̰̙̓͊̅͌̀̍̔̑͋͋́͝͠l̸̨̛͎̬̤̯͇͎̻̪̱͕̈̾̏̏̈́̒́̊́̀̾͐̚͜d̴̛͖͔̼̱̝̖̒̆̽̾͋̋͐͜͜͝͝͠n̸̙̰̫͖̜̝̑̌̇̅̀͒̈́͝t̴̡̡͎̟̗̪͈̼͎͓̥̙͇̏̄̎̾̎͒͝͝ ̵̢̨̛͓̫͙̭̣̥̭̌̂͂́͠b̶̨̨̯̻̮͔̼͓̘̥̊̂̍͑̏̌̈́̅̓̋̄̆̈́͂̐̓̚͜ę̸̝̠͉͕͖͕͈͌ ̶̲̣̥̰̭̈̄͒h̷̢͖̺͉̞̫̺̦̼̖̪͍̻̮̿̀̀͛̌͐̆͑͝e̷̮̿̽̿̊̃̊͂̇̍̈́͗̔͋́̆̆͠r̴̡͖̩̻̩͍̋ȇ̸̛̼͓̺͉̩̖̮̲̤͉͚͖̥̲̳̜͌͑͋̋̔ͅ</h1>
         </header>
 
         <main>
@@ -19,23 +22,23 @@
             <div id="counter">Artworks Viewed: 0</div>
 
             <!-- Buttons for Reset, Adding New Art, and Removing Art -->
-            <button id="reset-button">Reset Gallery</button>
-            <button id="add-art-button">Add New Artwork</button>
-            <button id="remove-art-button">Remove Artwork</button>
+            <button id="reset-button" class="buttons">Reset Gallery</button>
+            <button id="add-art-button" class="buttons">Add New Artwork</button>
+            <button id="remove-art-button" class="buttons">Remove Artwork</button>
 
             <!-- Art Gallery Section -->
             <section class="art-grid">
                 <div class="art-panel">
-                    <img src="https://via.placeholder.com/200" alt="Starry Night">
-                    <p>Starry Night by Vincent van Gogh</p>
+                    <img src="https://img.kwcdn.com/product/open/2024-06-12/1718176920223-9e6929b367fc4960af6f7aed2ccfdde3-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" alt="Starry Night">
+                    <p>Momo is here... by Momo</p>
                 </div>
                 <div class="art-panel">
-                    <img src="https://via.placeholder.com/200" alt="Mona Lisa">
-                    <p>Mona Lisa by Leonardo da Vinci</p>
+                    <img src="https://m.media-amazon.com/images/I/81ul96JjP-L._AC_UY1000_.jpg" alt="Mona Lisa">
+                    <p>Momo hears you by momo</p>
                 </div>
                 <div class="art-panel">
-                    <img src="https://via.placeholder.com/200" alt="The Persistence of Memory">
-                    <p>The Persistence of Memory by Salvador Dalí</p>
+                    <img src="https://mynbc15.com/resources/media/af15d90f-aeed-46ac-9ca7-a1b62d21f35d-jumbo21x9_MomoChallengeNew.jpg?1545331335749" alt="The Persistence of Memory">
+                    <p>You hear Momo by you</p>
                 </div>
             </section>
         </main>
@@ -53,14 +56,14 @@
             let removeMode = false;
 
             const artworks = [
-                { title: 'The Birth of Venus', artist: 'Sandro Botticelli', img: 'https://via.placeholder.com/200' },
-                { title: 'The Night Watch', artist: 'Rembrandt van Rijn', img: 'https://via.placeholder.com/200' },
-                { title: 'The Kiss', artist: 'Gustav Klimt', img: 'https://via.placeholder.com/200' },
-                { title: 'American Gothic', artist: 'Grant Wood', img: 'https://via.placeholder.com/200' },
-                { title: 'Las Meninas', artist: 'Diego Velázquez', img: 'https://via.placeholder.com/200' },
-                { title: 'The Last Supper', artist: 'Leonardo da Vinci', img: 'https://via.placeholder.com/200' },
-                { title: 'Water Lilies', artist: 'Claude Monet', img: 'https://via.placeholder.com/200' },
-                { title: 'Starry Night Over the Rhône', artist: 'Vincent van Gogh', img: 'https://via.placeholder.com/200' }
+                { title: 'She\'s coming for you', artist: 'Unknown', img: 'https://m.media-amazon.com/images/I/81ul96JjP-L._AC_UY1000_.jpg' },
+                { title: 'Momo can run faster than you', artist: 'Momo', img: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/03/04/14/momo.jpg?width=1200&height=1200&fit=crop' },
+                { title: 'What was that sound', artist: 'Yourself', img: 'https://spirit.scene7.com/is/image/Spirit/01577667-a?$Detail$' },
+                { title: 'American Momo', artist: 'Momo', img: 'https://rukminim2.flixcart.com/image/750/900/xif0q/mask/j/5/g/free-size-momo-horror-scary-mask-with-hair-1-gladsome-bear-original-imaggnbqhfhc5myu.jpeg?q=20&crop=false' },
+                { title: 'Las Momo', artist: 'Momo', img: 'https://faithandfourletterwords.com/wp-content/uploads/2019/02/momo.jpg' },
+                { title: 'The Last Momo', artist: 'momo...', img: 'https://mynbc15.com/resources/media/af15d90f-aeed-46ac-9ca7-a1b62d21f35d-jumbo21x9_MomoChallengeNew.jpg?1545331335749' },
+                { title: 'she hears that', artist: 'momo.', img: 'https://wjactv.com/resources/media/d60d4f1c-9fcc-4ae4-8058-05e885080e19-jumbo1x1_momo2.PNG?1551379953972' },
+                { title: 'You can\' run from her', artist: 'Momo', img: 'https://img.kwcdn.com/product/open/2024-06-12/1718176920223-9e6929b367fc4960af6f7aed2ccfdde3-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp' }
             ];
 
             function updateCounter() {
