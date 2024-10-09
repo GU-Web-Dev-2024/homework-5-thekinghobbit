@@ -46,28 +46,34 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleRemoveMode() {
         removeMode = !removeMode;
         removeArtButton.classList.toggle('active', removeMode);
-        removeArtButton.textContent = removeMode ? 'Remove Artwork (Active)' : 'Remove Artwork';
+        removeArtButton.textContent = removeMode ? 'Remove viewed (Active)' : 'Remove viewed';
     }
 
+
+    
     function handlePanelClick(panel) {
         if (removeMode) {
             if (panel.classList.contains('viewed')) {
+                panel.classList.remove('viewed');
                 viewedCount--;
                 updateCounter();
             }
-            panel.remove();
         } else {
-            toggleViewed(panel);
+            if (!panel.classList.contains('viewed')) {
+                panel.classList.add('viewed');
+                viewedCount++;
+                updateCounter();
+            }
         }
     }
-
+    
     artPanels.forEach(panel => {
         panel.addEventListener('click', () => handlePanelClick(panel));
     });
-
+    
     resetButton.addEventListener('click', resetGallery);
     removeArtButton.addEventListener('click', toggleRemoveMode);
-
+    
     addArtButton.addEventListener('click', () => {
         const randomArtwork = artworks[Math.floor(Math.random() * artworks.length)];
         const newPanel = document.createElement('div');

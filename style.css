@@ -8,7 +8,6 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #000000;
-    /* color: #920000; */
     border: 2px dotted #000000;
 
     height: 100vh;
@@ -31,7 +30,6 @@ body {
 }
 
 header {
-    /* background-color: #550000; */
     color: rgb(0, 0, 0);
     padding: 20px;
     text-align: center;
@@ -53,9 +51,7 @@ header h1 {
 }
 
 .art-panel {
-    /* background-color: rgba(rgb(94, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), 0); */
     border: 2px dotted #000000;
-    
     color: #474545;
     border-radius: 10px;
     padding: 20px;
